@@ -1,0 +1,18 @@
+/* 
+  InfoPlist.strings
+  RFLanguageHelper
+
+  Created by Raywf on 2018/2/26.
+  Copyright © 2018年 S.Ray. All rights reserved.
+*/
+
+
+CFBundleDisplayName = "中文繁體";
+
+NSBluetoothPeripheralUsageDescription = "藍牙";
+NSCameraUsageDescription = "相機";
+NSLocationAlwaysAndWhenInUseUsageDescription = "永久定位";
+NSLocationWhenInUseUsageDescription = "臨時定位";
+NSMicrophoneUsageDescription = "麥克風";
+NSPhotoLibraryAdditionsUsageDescription = "添加照片";
+NSPhotoLibraryUsageDescription = "查看照片";
