@@ -24,6 +24,11 @@
 + (NSDictionary *)AppLanguage;
 
 /**
+ 根据具体语言简写，获取对应的语言类型码
+ */
++ (NSInteger)LanguageCodeViaKey:(NSString *)key;
+
+/**
  获取当前设置的语言类型码
  */
 + (NSInteger)LanguageCode;

@@ -78,6 +78,25 @@ static RFLanguageHelper *instance = nil;
     return [instance.appLanguage copy];
 }
 
++ (NSInteger)LanguageCodeViaKey:(NSString *)keyX {
+    if (!instance) {
+        NSLog(@"【XFLanguageHelper】未初始化！");
+        return -1;
+    }
+
+    NSInteger langCode = -1;
+    for (NSString *key in instance.appLanguage.allKeys) {
+        NSString *obj = [instance.appLanguage objectForKey:key];
+        if ([obj isEqualToString:keyX]) {
+            langCode = [key integerValue];
+            if (langCode!=-1) {
+                break;
+            }
+        }
+    }
+    return langCode;
+}
+
 + (NSInteger)LanguageCode {
     if (!instance) {
         NSLog(@"【RFLanguageHelper】未初始化！");

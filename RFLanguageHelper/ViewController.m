@@ -66,17 +66,20 @@
         }];
     }]];
     [alertCtr addAction:[UIAlertAction actionWithTitle:@"中文简体" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [RFLanguageHelper SetAppLanguageViaCode:1 Completion:^{
+        NSInteger langCode1 = [RFLanguageHelper LanguageCodeViaKey:@"zh-Hans"];
+        [RFLanguageHelper SetAppLanguageViaCode:langCode1 Completion:^{
             [weakSelf UpdateUI];
         }];
     }]];
     [alertCtr addAction:[UIAlertAction actionWithTitle:@"中文繁體" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [RFLanguageHelper SetAppLanguageViaCode:2 Completion:^{
+        NSInteger langCode3 = [RFLanguageHelper LanguageCodeViaKey:@"zh-Hant"];
+        [RFLanguageHelper SetAppLanguageViaCode:langCode3 Completion:^{
             [weakSelf UpdateUI];
         }];
     }]];
     [alertCtr addAction:[UIAlertAction actionWithTitle:@"English" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [RFLanguageHelper SetAppLanguageViaCode:0 Completion:^{
+        NSInteger langCode2 = [RFLanguageHelper LanguageCodeViaKey:@"en"];
+        [RFLanguageHelper SetAppLanguageViaCode:langCode2 Completion:^{
             [weakSelf UpdateUI];
         }];
     }]];

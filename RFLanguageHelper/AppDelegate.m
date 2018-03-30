@@ -23,6 +23,12 @@
     [UIApplication sharedApplication].idleTimerDisabled = YES;
 
     [RFLanguageHelper InitLanguageHelper:@"TestLanguage"];
+    NSInteger langCode1 = [RFLanguageHelper LanguageCodeViaKey:@"zh-Hans"];
+    NSInteger langCode2 = [RFLanguageHelper LanguageCodeViaKey:@"en"];
+    if ([RFLanguageHelper LanguageCode]!=langCode1
+        && [RFLanguageHelper LanguageCode]!=langCode2) {
+        [RFLanguageHelper SetAppLanguageViaCode:langCode1 Completion:nil];
+    }
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
